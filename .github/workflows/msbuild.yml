@@ -47,4 +47,4 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
         & "x64\Release\wcharconv-test-dynamic.exe"
-        & "x64\Release\wcharconv-test-static.exe
+        & "x64\Release\wcharconv-test-static.exe"

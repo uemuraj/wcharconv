@@ -3,7 +3,9 @@
 #include <ostream>
 #include <string>
 #include <string_view>
+
 #include "integer2chars.h"
+#include "mbs2wcs.h"
 
 namespace cnv
 {
@@ -70,5 +72,12 @@ namespace cnv
 	std::basic_ostream<CharT> & operator<<(std::basic_ostream<CharT> & os, const to_hex<valueT> & hex)
 	{
 		return os << (std::basic_string_view<CharT>) Integer2CharsBase16<CharT>(hex.value, hex.showbase);
+	}
+
+
+	// ƒƒCƒh•¶š—ñ‚Ö‚Ì•ÏŠ·F
+	inline std::wostream & operator<<(std::wostream & os, std::string_view mbs)
+	{
+		return MultiByte2WideChar(mbs, os);
 	}
 }

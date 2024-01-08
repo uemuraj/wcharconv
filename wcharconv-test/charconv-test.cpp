@@ -5,7 +5,7 @@
 
 namespace cnv
 {
-	TEST(to_dec, int_to_string)
+	TEST(to_dec, int32_to_string)
 	{
 		EXPECT_EQ((std::string) to_dec(123), "123");
 		EXPECT_EQ((std::string) to_dec(1234567890), "1234567890");
@@ -14,7 +14,7 @@ namespace cnv
 		EXPECT_EQ((std::string) to_dec(-1234567890), "-1234567890");
 	}
 
-	TEST(to_dec, int_to_wstring)
+	TEST(to_dec, int32_to_wstring)
 	{
 		EXPECT_EQ((std::wstring) to_dec(123), L"123");
 		EXPECT_EQ((std::wstring) to_dec(1234567890), L"1234567890");
@@ -23,7 +23,7 @@ namespace cnv
 		EXPECT_EQ((std::wstring) to_dec(-1234567890), L"-1234567890");
 	}
 
-	TEST(to_dec, int_to_string_width_9)
+	TEST(to_dec, int32_to_string_width_9)
 	{
 		EXPECT_EQ((std::string) to_dec(123, 9), "000000123");
 		EXPECT_EQ((std::string) to_dec(1234567890, 9), "1234567890");
@@ -32,7 +32,7 @@ namespace cnv
 		EXPECT_EQ((std::string) to_dec(-1234567890, 9), "-1234567890");
 	}
 
-	TEST(to_dec, int_to_wstring_width_9)
+	TEST(to_dec, int32_to_wstring_width_9)
 	{
 		EXPECT_EQ((std::wstring) to_dec(123, 9), L"000000123");
 		EXPECT_EQ((std::wstring) to_dec(1234567890, 9), L"1234567890");
@@ -41,28 +41,28 @@ namespace cnv
 		EXPECT_EQ((std::wstring) to_dec(-1234567890, 9), L"-1234567890");
 	}
 
-	TEST(to_dec, uint_to_string)
+	TEST(to_dec, uint32_to_string)
 	{
 		EXPECT_EQ((std::string) to_dec(123u), "123");
 		EXPECT_EQ((std::string) to_dec(1234567890u), "1234567890");
 		EXPECT_EQ((std::string) to_dec(0u), "0");
 	}
 
-	TEST(to_dec, uint_to_wstring)
+	TEST(to_dec, uint32_to_wstring)
 	{
 		EXPECT_EQ((std::wstring) to_dec(123u), L"123");
 		EXPECT_EQ((std::wstring) to_dec(1234567890u), L"1234567890");
 		EXPECT_EQ((std::wstring) to_dec(0u), L"0");
 	}
 
-	TEST(to_dec, uint_to_string_width_9)
+	TEST(to_dec, uint32_to_string_width_9)
 	{
 		EXPECT_EQ((std::string) to_dec(123u, 9), "000000123");
 		EXPECT_EQ((std::string) to_dec(1234567890u, 9), "1234567890");
 		EXPECT_EQ((std::string) to_dec(0u, 9), "000000000");
 	}
 
-	TEST(to_dec, uint_to_wstring_width_9)
+	TEST(to_dec, uint32_to_wstring_width_9)
 	{
 		EXPECT_EQ((std::wstring) to_dec(123u, 9), L"000000123");
 		EXPECT_EQ((std::wstring) to_dec(1234567890u, 9), L"1234567890");
@@ -133,28 +133,28 @@ namespace cnv
 		EXPECT_EQ((std::wstring) to_dec(0ULL, 9), L"000000000");
 	}
 
-	TEST(to_hex, int_to_string)
+	TEST(to_hex, int32_to_string)
 	{
 		EXPECT_EQ((std::string) to_hex(0x123), "0x00000123");
 		EXPECT_EQ((std::string) to_hex(0x12345678), "0x12345678");
 		EXPECT_EQ((std::string) to_hex(0), "0x00000000");
 	}
 
-	TEST(to_hex, int_to_wstring)
+	TEST(to_hex, int32_to_wstring)
 	{
 		EXPECT_EQ((std::wstring) to_hex(0x123), L"0x00000123");
 		EXPECT_EQ((std::wstring) to_hex(0x12345678), L"0x12345678");
 		EXPECT_EQ((std::wstring) to_hex(0), L"0x00000000");
 	}
 
-	TEST(to_hex, int_to_string_noshowbase)
+	TEST(to_hex, int32_to_string_noshowbase)
 	{
 		EXPECT_EQ((std::string) to_hex(0x123, false), "00000123");
 		EXPECT_EQ((std::string) to_hex(0x12345678, false), "12345678");
 		EXPECT_EQ((std::string) to_hex(0, false), "00000000");
 	}
 
-	TEST(to_hex, int_to_wstring_noshowbase)
+	TEST(to_hex, int32_to_wstring_noshowbase)
 	{
 		EXPECT_EQ((std::wstring) to_hex(0x123, false), L"00000123");
 		EXPECT_EQ((std::wstring) to_hex(0x12345678, false), L"12345678");

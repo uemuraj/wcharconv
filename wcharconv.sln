@@ -10,7 +10,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{1FDCD603-77A6-4178-8DEB-3EE9691078D9}"
 	ProjectSection(SolutionItems) = preProject
 		integer2chars.h = integer2chars.h
+		mbs2wcs.h = mbs2wcs.h
+		streambuf4dbg.h = streambuf4dbg.h
 		wcharconv.h = wcharconv.h
+		wchardebug.h = wchardebug.h
 	EndProjectSection
 EndProject
 Global
